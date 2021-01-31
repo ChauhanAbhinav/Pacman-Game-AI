@@ -1,0 +1,83 @@
+/* Main CSS */
+:root {
+    --GROUND:#000000;
+    --WALL:  #5f00ff;
+    --COIN:  #e89abe;
+    --PACMAN:#f6ff00;
+    --BLINKY:#ff0000;
+    --PINKY: #ffa0c8;
+    --INKY:  #00e8cd;
+    --CLYDE: #ffa000;
+    --PIXEL: 20px;
+    --X_LENGTH: 31;
+    --Y_LENGTH: 21;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    /* -webkit-transition: all 1s ease-out 1s;
+    -moz-transition: all 1s ease-out 1s;
+    -o-transition: all 1s ease-out 1s;
+    transition: all 1s ease-out 1s; */
+}
+#world {
+    height: 100%;
+    width: calc(var(--PIXEL) * var(--X_LENGTH));
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+#maze {
+    height: calc(var(--PIXEL) * var(--Y_LENGTH));
+    width: calc(var(--PIXEL) * var(--X_LENGTH));
+    /* border: 1px solid chartreuse; */
+}
+.OBJECT {
+    display: inline-block;
+    height: var(--PIXEL);
+    width: var(--PIXEL);
+    vertical-align: top;
+}
+.WALL {
+    background-color: var(--WALL);
+}
+.COIN {
+    background-color: var(--GROUND);
+    background-image: url(./../assets/img/coin-tr.png);
+    background-repeat: no-repeat;
+    background-size: auto 25%;
+    background-position: center;
+}
+.PACMAN {
+    background-color: var(--GROUND);
+    background-image: url(./../assets/img/pacman-r.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.GHOST {
+    background-color: var(--GROUND);
+    background-image: url(./../assets/img/ghost-r.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.GROUND {
+    background-color: var(--GROUND);
+}
+#logo {
+    position: absolute;
+    height: 60px;
+    margin-top: 10px;
+}
+.score-box {
+    position: absolute;
+    display: inline-block;
+    padding: 5px;
+    text-align: center;
+    width: 60px;
+    left: 80%;
+    top:8%;
+}
